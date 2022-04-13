@@ -4,11 +4,11 @@ const initialState = {
     numOfCakes : 10
 }
 
-const cakeReucer = (state = initialState , action) =>{
+const cakeReducer = (state = initialState , action) =>{
     switch(action.type){
         case BUY_CAKE: return{
             ...state,
-            numOfCakes : state.numOfCakes - 1
+            numOfCakes : state.numOfCakes - action.payload
         }
 
         default : return state
@@ -16,4 +16,4 @@ const cakeReucer = (state = initialState , action) =>{
     }
 }
 
-export default cakeReucer
+export default cakeReducer
